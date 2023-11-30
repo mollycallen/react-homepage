@@ -1,0 +1,220 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #98c1d9;
+	width: 100%;
+	height: 100vh;
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: nowrap;
+	margin: 1rem;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.game-header {
+	font-family: "Bungee Inline", cursive;
+	font-size: 5rem;
+	color: #293241;
+	display: flex;
+	white-space: nowrap;
+	padding-bottom: 1rem;
+}
+
+.game-main {
+	max-width: 600px;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.board {
+	flex: 2;
+	display: grid;
+	align-content: center;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 0;
+	row-gap: 0;
+	height: 60vh;
+}
+
+.cell {
+	height: 20vh;
+	font-family: "Bungee Inline", cursive;
+	background: white;
+	font-size: 2rem;
+	pointer-events: none;
+	cursor: not-allowed;
+	border: 1px solid #bebfc0;
+	border-collapse: collapse;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.x-win {
+	background: #269b8f;
+	color: white;
+}
+
+.o-win {
+	background: #df8b16;
+	color: white;
+}
+
+.cell.available {
+	pointer-events: auto;
+	cursor: pointer;
+	background: white;
+}
+
+.available:hover {
+	background: #e7e6e3;
+}
+
+.scoreboard {
+	flex: 1;
+	background: white;
+	font-size: 1rem;
+	display: flex;
+	flex-direction: column;
+	height: 60vh;
+	overflow: hidden;
+}
+
+.score-header {
+	background: #293241;
+	color: white;
+	font-size: 1.2rem;
+	text-align: center;
+	padding: 1.5rem 0rem;
+	white-space: nowrap;
+}
+
+.score-container {
+	padding: 0.5rem 1rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	border-top: 2px solid #bebfc0;
+}
+
+.score-container .score {
+	padding: 0 0.5rem;
+}
+
+.score-container .d,
+.score-container .x,
+.score-container .o {
+	display: block;
+	padding-right: 0.3rem;
+	font-size: 1rem;
+	color: #269b8f;
+	font-family: "Bungee Inline", cursive;
+}
+
+.score-container .o {
+	color: #df8b16;
+}
+
+.score-container .d {
+	color: black;
+	opacity: 0.5;
+}
+
+.play-btn {
+	cursor: pointer;
+	background: #3d5a80;
+	color: white;
+	font-size: 1.2rem;
+	font-family: "Roboto", sans-serif;
+	border: none;
+	width: 100%;
+	height: 100%;
+}
+
+.play-btn:hover {
+	text-decoration: underline;
+	opacity: 0.8;
+}
+
+.highlight {
+	background: #e7e6e3;
+}
+
+.x-select {
+	color: #269b8f;
+	cursor: not-allowed;
+}
+
+.o-select {
+	color: #df8b16;
+	cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+	.game-header {
+		font-size: 4rem;
+	}
+
+	.board {
+		box-shadow: none;
+	}
+
+	.highlight {
+		background: inherit;
+	}
+}
+@media (max-width: 500px) {
+	.game-header {
+		font-size: 2.8rem;
+	}
+	.game-main {
+		flex-direction: column;
+		justify-content: flex-start;
+		gap: 1rem;
+	}
+	.scoreboard {
+		justify-content: flex-start;
+		height: fit-content;
+		flex: unset;
+	}
+	.score-container {
+		padding: 0.5rem 1rem;
+	}
+	.board {
+		flex: unset;
+		height: unset;
+	}
+	.play-btn {
+		padding: 2rem;
+	}
+	.cell {
+		height: 12vh;
+	}
+	.score-header {
+		display: none;
+		height: 0;
+	}
+}

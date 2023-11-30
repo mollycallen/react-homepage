@@ -1,0 +1,93 @@
+.home {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: stretch;
+	max-width: 100vw;
+	width: 100%;
+	height: 100%;
+}
+.home .right-side {
+	flex: 1;
+	min-width: 280px;
+	background: var(--light-sage);
+}
+
+.home .left-side {
+	flex: 3;
+	padding: 1rem 2rem;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+}
+.home .blurb {
+	padding: 3rem 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	border-bottom: 2px solid var(--light-sage);
+}
+.home .blurb-title {
+	color: var(--sage);
+	font-size: 2rem;
+	font-style: italic;
+}
+.home .blurb-text {
+	font-size: 0.9rem;
+	line-height: 1.5rem;
+}
+.home .blurb-link {
+	text-decoration: none;
+}
+@media only screen and (max-width: 800px) {
+	.home {
+		flex-direction: column-reverse;
+	}
+	.home .left-side {
+		padding: 0;
+		width: 100%;
+		max-width: 100vw;
+	}
+	.home .right-side {
+		width: 100%;
+	}
+	.home .right-side .today {
+		flex-wrap: wrap;
+		align-items: stretch;
+		gap: 0.5rem;
+		width: 100%;
+	}
+	.home .right-side .box .heading {
+		padding: 0 0 0.5rem 0;
+	}
+	.home .right-side .quote-box {
+		flex: 1;
+	}
+	.home .right-side .quote-box .quote {
+		padding: 0 0.5rem;
+	}
+	.home .right-side .weather {
+		flex: 1;
+	}
+	.home .right-side .weather .current {
+		justify-content: space-around;
+	}
+	.home .right-side .weather .weather-details {
+		margin: 0 0.8rem;
+	}
+	.home .right-side .weather .btn-div {
+		justify-content: center;
+	}
+	.home .right-side .cat-box {
+		display: none;
+	}
+
+	.home .right-side .weather .grid {
+		display: none;
+	}
+	.home .right-side .weather .credit {
+		display: none;
+	}
+}

@@ -1,0 +1,7 @@
+.day-time {
+	font-size: 0.9rem;
+	font-weight: 800;
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: nowrap;
+}

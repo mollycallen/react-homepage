@@ -1,0 +1,62 @@
+    .container {
+      padding: 2rem;
+      height: 800px;
+      gap: 1rem;
+      display: grid;
+      grid-template-areas:
+        'image1 image1 image2'
+        'image1 image1 image3'
+        'image4 image4 image5'
+        'image4 image4 image5'
+        'image6 image7 image7';
+    }
+
+    .container div {
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .image1 {
+      grid-area: image1;
+      /* background-image: url("img1.jpg"); */
+      background-color: lightblue;
+    }
+
+    .image2 {
+      grid-area: image2;
+      /* background-image: url("img2.jpg"); */
+      background-color: lightcoral;
+    }
+
+    .image3 {
+      grid-area: image3;
+      /* background-image: url("img3.jpg"); */
+      background-color: lightgray;
+    }
+
+    .image4 {
+      grid-area: image4;
+      /* background-image: url("img4.jpg"); */
+      background-color: lightgreen;
+    }
+
+    .image5 {
+      grid-area: image5;
+      /* background-image: url("img5.jpg"); */
+      background-color: lightcyan;
+    }
+
+    .image6 {
+      grid-area: image6;
+      /* background-image: url("img6.jpg"); */
+      background-color: lightgoldenrodyellow;
+    }
+
+    .image7 {
+      grid-area: image7;
+      /* background-image: url("img7.jpg"); */
+      background-color: lightsteelblue;
+    }

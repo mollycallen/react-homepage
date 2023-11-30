@@ -1,0 +1,40 @@
+.news {
+	background: white;
+	font-size: 1rem;
+}
+.news-header {
+	display: flex;
+	align-items: center;
+	font-weight: bold;
+	width: fit-content;
+	cursor: pointer;
+	font-size: 0.8rem;
+	white-space: nowrap;
+}
+.news .news-list {
+	overflow-y: auto;
+}
+.news .news-item {
+	display: flex;
+	gap: 1.5rem;
+	font-size: 0.9rem;
+	padding: 1.5rem 1rem;
+	line-height: 1.5rem;
+}
+.news .news-item:nth-child(2n) {
+	background: var(--light-gray);
+}
+
+.news .news-date {
+	font-weight: bold;
+	font-size: 1.1rem;
+}
+@media only screen and (max-width: 600px) {
+	.news .list-group-item {
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+	.news .news-date {
+		font-size: 1rem;
+	}
+}

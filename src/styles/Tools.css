@@ -1,0 +1,39 @@
+.tools {
+	background: white;
+	display: flex;
+	justify-content: flex-start;
+	border: 2px solid var(--gray);
+	border-radius: 4px;
+	margin-top: 2rem;
+	height: 75vh;
+	overflow: auto;
+}
+.tools .nav-link {
+	padding: 2rem 1rem;
+	white-space: nowrap;
+}
+.tools .tool-area {
+	padding: 2rem;
+	width: 100%;
+	display: flex;
+	align-items: flex-end;
+	background-color: var(--light-gray);
+	border-radius: 5px;
+	border-left: 2px solid var(--gray);
+}
+.tools .tool-area iframe {
+	margin-top: 2rem;
+	height: 100%;
+	overflow: auto;
+	width: 100%;
+	border: none;
+}
+
+@media only screen and (max-width: 600px) {
+	.tools .nav-link {
+		padding: 2rem 0.3rem;
+	}
+	.tools .tool-area {
+		padding: 0.5rem;
+	}
+}

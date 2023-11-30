@@ -1,0 +1,71 @@
+.about {
+	overflow: hidden;
+	background: white;
+}
+
+.about .cat.welcome-cat {
+	display: flex;
+	flex-direction: row-reverse;
+	gap: 1rem;
+	align-items: center;
+}
+.about .cat-title {
+	font-size: 1.5rem;
+	color: var(--sage);
+	font-weight: 800;
+	padding: 1.5rem 0 0 0;
+}
+
+.about .welcome {
+	margin-top: 1rem;
+	font-size: 0.9rem;
+	line-height: 2rem;
+	padding-left: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+.about .cat-detail {
+	font-size: 1rem;
+	line-height: 1.3rem;
+	padding-left: 0.5rem;
+}
+.about .cat-detail.skills {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+.about .cat-detail .skill {
+	flex: 1;
+	padding: 0.5rem;
+	font-size: 0.9rem;
+	line-height: 1.7rem;
+}
+
+.about .school-icon {
+	width: 50px;
+	height: 50px;
+	object-fit: contain;
+	margin-right: 0.5rem;
+}
+
+.about .avatar {
+	float: right;
+	border: 2px solid #bbb;
+	padding: 0 0.5rem 0 1rem;
+	border-radius: 50%;
+	display: flex;
+}
+.about .avatar img {
+	width: 250px;
+	height: 285px;
+	opacity: 70%;
+	border-radius: 50%;
+	object-fit: cover;
+}
+@media only screen and (max-width: 700px) {
+	.about .cat.welcome-cat {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		align-items: center;
+	}
+}

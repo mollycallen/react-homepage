@@ -1,0 +1,50 @@
+.today {
+	font-size: 0.9rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	overflow: hidden;
+	height: fit-content;
+	width: fit-content;
+	padding: 1rem;
+}
+.quote-box .quote {
+	padding: 0 1rem;
+}
+.quote-box .quote .text {
+	font-style: italic;
+}
+.quote-box .quote .author {
+	padding: 0.3rem 0;
+	text-align: right;
+}
+
+.right-side .box {
+	border-radius: 4px;
+	display: flex;
+	height: fit-content;
+	flex-direction: column;
+	padding: 0.5rem;
+	background: white;
+	box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+	margin-top: 0;
+}
+
+.right-side .box .heading {
+	font-size: 1rem;
+	font-weight: 800;
+	padding: 0.5rem 0 1rem 0;
+	color: var(--black);
+}
+@media only screen and (max-width: 550px) {
+	.right-side .box {
+		margin-bottom: 0;
+		padding: 0.4rem;
+	}
+	.right-side .box .heading {
+		font-size: 0.9rem;
+	}
+	.right-side .big-text {
+		font-size: 1rem;
+	}
+}

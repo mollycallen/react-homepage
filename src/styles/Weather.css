@@ -1,0 +1,60 @@
+.weather {
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+}
+.weather p {
+	margin-bottom: 0;
+}
+
+.weather .current {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 1rem;
+	gap: 1rem;
+}
+.weather-details {
+	display: flex;
+	flex-direction: column;
+	margin: 0 0.5rem;
+}
+.weather-details .feels-like {
+	line-height: 1rem;
+	font-size: 0.9rem;
+}
+.weather .grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding: 0.5rem;
+	border: 1px solid var(--blue);
+	border-radius: 4px;
+	margin-bottom: 1rem;
+	background: var(--sky);
+}
+.weather .grid-row {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0.7rem 0;
+}
+.weather .title {
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: var(--blue);
+}
+.weather .weather-header {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 0.5rem;
+}
+
+.weather .credit {
+	padding-bottom: 1rem;
+	font-size: 0.8rem;
+	font-style: italic;
+}
+.weather .btn {
+	width: 100%;
+}

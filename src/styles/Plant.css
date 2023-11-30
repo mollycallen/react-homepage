@@ -1,0 +1,18 @@
+.plant .label {
+	font-variant: small-caps;
+	color: black;
+	padding: 0.2rem;
+	background-color: var(--sky);
+	font-size: 0.9rem;
+	margin-right: 0.5rem;
+}
+
+.plant tr {
+	transition: all 0.5 ease;
+}
+.plant .red {
+	color: red;
+}
+.plant .saved-plants-div {
+	overflow-x: auto;
+}

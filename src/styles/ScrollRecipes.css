@@ -1,0 +1,76 @@
+/* scrollable list styles */
+
+.scrollable-container {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	position: relative;
+}
+.scrollable-container .icon {
+	border: 2px solid var(--dark-gray);
+	background: white;
+	padding: 0.4rem;
+	z-index: 2;
+	border-radius: 50%;
+	position: absolute;
+}
+.scrollable-container .icon:hover {
+	background: var(--blue);
+	color: white;
+}
+.scrollable-container .icon .scrollable-container .left-arrow {
+	left: 0px;
+}
+.scrollable-container .right-arrow {
+	right: 0px;
+}
+.scrollable-list {
+	margin: 0;
+	display: grid;
+	grid-auto-flow: column;
+	overflow-x: auto;
+	overscroll-behavior-inline: contain;
+}
+.scrollable-list::-webkit-scrollbar {
+	-webkit-appearance: none;
+}
+.snaps-inline {
+	scroll-snap-type: inline mandatory;
+}
+
+.snaps-inline > * {
+	scroll-snap-align: start;
+}
+.filter-type-container {
+	display: flex;
+	gap: 0.2rem;
+	align-items: center;
+	margin-bottom: 0.5rem;
+}
+.filter-type-container label {
+	padding-bottom: 0;
+	font-size: 0.8rem;
+}
+.filters {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 0 0 0.5rem 1rem;
+}
+.filter-type-container select {
+	padding: 0.3rem;
+	font-size: 0.8rem;
+	border: 1px solid var(--gray);
+}
+.filter-type-container option {
+	font-size: 0.8rem;
+}
+/* ex-Small devices */
+@media only screen and (max-width: 550px) {
+	.recipe .filter-type-container {
+		width: 100%;
+	}
+	.recipe .filter-type-container select {
+		width: 100%;
+	}
+}
